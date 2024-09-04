@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <a [routerLink]="['/createProperty']" class="btn p-0 icon-button mb-5" aria-label="Add">
+    <img src="/images/Add.png" alt="Add" class="icon-button-add">
+  </a>
+  
+  <div class="row">
+    <div class="col-md-3" *ngFor="let card of cards">
+      <div class="card">
+        <img [src]="card.imageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <ng-container *ngIf="card.status === 'rent'">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.5" cy="7.5" r="7.5" fill="#B60000"/>
+              </svg>
+            </ng-container>
+            <ng-container *ngIf="card.status === 'sale'">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.5" cy="7.5" r="7.5" fill="#006500"/>
+              </svg>
+            </ng-container>
+            <span class="ms-2">{{ card.status }}</span>
+          </div>
+          <h5 class="card-title" style="color: #14327A;">{{ card.title }}</h5>
+          <p class="card-text">{{ card.description }}</p>
+          <div class="d-flex align-items-center">
+            <a href="#" class="btn btn-primary me-2" style="background-color: #14327A; border-color: #14327A;">Details</a>
+            <button (click)="updateProperty(card.id)" class="btn p-0 icon-button" aria-label="Update">
+              <img src="/images/Updates.png" alt="Update" class="icon-button">
+            </button>
+            <button (click)="deleteProperty(card.id)" class="btn p-0 icon-button" aria-label="Delete">
+              <img src="/images/Delete.png" alt="Delete" class="icon-button">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
