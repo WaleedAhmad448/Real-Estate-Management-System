@@ -1,0 +1,71 @@
+<div class="container d-flex flex-column g-1">
+    <div style="height: 10vh;"></div>
+    <div class="d-flex section-title justify-content-center mb-3" data-aos="fade-up">
+        <h2 style="text-decoration: underline;">Contact</h2>
+    </div>
+    
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-between">
+            <div class="info-card col-lg-4 col-12 col-md-6 d-flex flex-column justify-content-center align-items-center 
+                            border-1" 
+                            data-aos="fade-up" 
+                            data-aos-delay="200">
+                <div class="d-flex align-items-center my-2">
+                    <img src="/assets/icons/address.png" class = 'icon'>
+                    <h4>Address</h4>
+                </div>
+                <p>Palestine, West-Bank, Najah National University</p>
+            </div>
+        
+            <div class="info-card col-lg-3 col-md-6 col-12 d-flex flex-column justify-content-center align-items-center 
+                            border-1" 
+                            data-aos="fade-up" 
+                            data-aos-delay="200">
+                <div class="d-flex align-items-center my-2">
+                    <img src="/assets/icons/phone.png" class = 'icon'>
+                    <h4>Call Us</h4>
+                </div>
+                <p>+970 599119988</p>
+            </div>
+        
+            <div class="info-card col-lg-4 col-md-6 col-12 d-flex flex-column justify-content-center align-items-center 
+                            border-1" 
+                            data-aos="fade-up" 
+                            data-aos-delay="200">
+                <div class="d-flex align-items-center my-2">
+                    <img src="/assets/icons/email.png" class = 'icon'>
+                    <h4>Email Us</h4>
+                </div>
+                <p>group5&#64;advanced.com</p>
+            </div>        
+        </div>
+    
+        <div class="row gy-2 mt-3 justify-content-between">
+            <!-- map -->
+            <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5503.1505916978185!2d35.220519258247094!3d32.22645427254555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ce019107d110f%3A0x12ebfea4ddbb7ccb!2sAn-Najah%20National%20University!5e0!3m2!1sen!2s!4v1725328242525!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="p-4 info-card">
+                    <div class="mb-4">
+                        <label for="name" class="form-label text-uppercase fw-bold small text-muted">Your Name</label>
+                        <input type="text" id="name" class="form-control border-0 border-bottom rounded-0" formControlName="name" placeholder="John Doe">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="form-label text-uppercase fw-bold small text-muted">Your Email</label>
+                        <input type="email" id="email" class="form-control border-0 border-bottom rounded-0" formControlName="email" placeholder="example@example.com">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label text-uppercase fw-bold small text-muted">Message</label>
+                        <textarea id="message" class="form-control border-0 border-bottom rounded-0" formControlName="message" rows="4" placeholder="Write your message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 text-uppercase">Send Message</button>
+                </form>
+            </div>
+            
+              
+        </div>
+    
+    </div>    
+</div>
